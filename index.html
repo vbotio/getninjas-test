@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>get ninjas test</title>
+</head>
+<body>
+	
+	<script>
+		
+		(function init(){
+			loadJSON();
+		}())
+
+	    function loadJSON(callback) {   
+
+	        var xobj = new XMLHttpRequest();
+	            xobj.overrideMimeType("application/json");
+	        xobj.open('GET', 'fields.json', true);
+	        xobj.onreadystatechange = function () {
+	            if (xobj.readyState == 4 && xobj.status == "200") {
+	                var response = JSON.parse(xobj.responseText) 
+	              	console.log(response._embedded);
+	            }
+	        };
+	        xobj.send(null);  
+	     }
+	
+	</script>
+</body>
+</html>
