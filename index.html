@@ -3,29 +3,18 @@
 <head>
 	<meta charset="UTF-8">
 	<title>get ninjas test</title>
+	<link rel="stylesheet" href="style.css">
+	<script src="script.js"></script>
 </head>
 <body>
-	
-	<script>
-		
-		(function init(){
-			loadJSON();
-		}())
-
-	    function loadJSON(callback) {   
-
-	        var xobj = new XMLHttpRequest();
-	            xobj.overrideMimeType("application/json");
-	        xobj.open('GET', 'fields.json', true);
-	        xobj.onreadystatechange = function () {
-	            if (xobj.readyState == 4 && xobj.status == "200") {
-	                var response = JSON.parse(xobj.responseText) 
-	              	console.log(response._embedded);
-	            }
-	        };
-	        xobj.send(null);  
-	     }
-	
-	</script>
+	<div class="container">
+		<h2 class="container_title">
+			Explique o que você precisa
+			<small>Peça orçamento grátis, online!</small>
+		</h2>
+		<div id="form">
+			
+		</div>
+	</div>
 </body>
 </html>

@@ -1,0 +1,90 @@
+* {
+	padding: 0;
+	margin: 0;
+	border: 0;
+	box-sizing: border-box;
+}
+body {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	font-family: arial;
+}
+.container {
+	display: flex;
+	justify-content: center;
+	width: 553px;
+	height: auto;
+	flex-wrap: wrap;
+	border: 1px solid blue;
+	border-radius: 5px;
+}
+
+.container .container_title {
+	font-size: 24px;
+	border-bottom: 2px solid rgba(19, 147, 246, .2);
+	text-align: center;
+	width: 100%;
+	color: #1393f6;
+	margin: 14px 10%;
+}
+
+.container .container_title small {
+	display: block;
+	margin-top: 5px;
+	font-size: 16px;
+	font-style: italic;
+}
+
+.container #form {
+	width: 553px;
+	height: auto;
+	padding: 0 10%;
+}
+
+.container #form .form_section, .container #form .form_section label:first-child {
+	width: 100%;
+	display: block;
+}
+
+.container #form .form_section label:first-child {
+	margin-bottom: 5px;
+	color: rgba(51,51,51, .9);
+	font-size: 15px;
+	font-weight: 700;
+}
+
+.container #form .form_section ul {
+	list-style: none;
+}
+
+.container #form .form_section ul li.item_check {
+	font-size: 14px;
+	color: rgba(51,51,51, .6);
+	position: relative;
+	margin-top: 10px;
+	height: 20px;
+	padding-left: 10px;
+}
+
+.container #form .form_section ul li.item_check input[type=checkbox] {
+	opacity: 0;
+}
+
+.container #form .form_section ul li.item_check input[type=checkbox]:checked ~ label:before {
+	background: #1393f6;
+	content: "✓";
+	color: white;
+}
+.container #form .form_section ul li.item_check label:before {
+	content:  "";
+	width: 18px;
+	height: 18px;
+	background: #eff4fa;
+	text-align: center;
+	border-radius: 4px;
+	box-shadow: 0 0 0 1px rgba(83, 110, 123, .3);
+	position: absolute;
+	left: 0;
+}
