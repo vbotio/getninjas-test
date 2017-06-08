@@ -12,9 +12,16 @@
 			Explique o que você precisa
 			<small>Peça orçamento grátis, online!</small>
 		</h2>
-		<div id="form">
-			
+		<form id="form-job"></form>
+		<form id="form-user-data"></form>
+		<div class="submit">
+			<button id="nextstep" class="btn btn_lg" onclick="nextStep();">Buscar profissionais</button>
+			<button id="finish" class="btn btn_lg hidden">Finalizar</button>
 		</div>
+		<ol class="form_footer">
+			<li id="first-step" class="active">1. Seu pedido</li>
+			<li id="second-step">2. Seus dados</li>
+		</ol>
 	</div>
 </body>
 </html>

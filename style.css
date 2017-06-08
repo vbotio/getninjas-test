@@ -4,12 +4,18 @@
 	border: 0;
 	box-sizing: border-box;
 }
-body {
+html, body {
 	width: 100%;
-	height: 100%;
+	min-height: 100%;
+}
+body {
 	display: flex;
 	justify-content: center;
 	font-family: arial;
+	background: url('http://www.protocol.global/wp-content/uploads/2017/03/blur-bg-blurred.jpg') center center;
+}
+.hidden {
+	display: none;
 }
 .container {
 	display: flex;
@@ -17,8 +23,10 @@ body {
 	width: 553px;
 	height: auto;
 	flex-wrap: wrap;
-	border: 1px solid blue;
 	border-radius: 5px;
+	background: white;
+	margin: 50px 0;
+	box-shadow: 0px 2px 4px 0 rgba(0,0,0,0.1);
 }
 
 .container .container_title {
@@ -28,6 +36,7 @@ body {
 	width: 100%;
 	color: #1393f6;
 	margin: 14px 10%;
+	padding-bottom: 15px;
 }
 
 .container .container_title small {
@@ -36,30 +45,56 @@ body {
 	font-size: 16px;
 	font-style: italic;
 }
+.container .submit {
+	width: 100%;
+	height: 50px;
+	margin: 40px 10% 0;
+}
+.container .submit .btn {
+	background: #1393f6;
+	color: white;
+	font-size: 14px;
+	font-weight: 400;
+	border-radius: 6px;
+	letter-spacing: .3;
+	text-transform: uppercase;
+	cursor: pointer;
+	text-align: center;
+}
 
-.container #form {
+.container .submit .btn_lg {
+	width: 100%;
+	height: 50px;
+	line-height: 50px;
+}
+
+.container #form-job, .container #form-user-data {
 	width: 553px;
 	height: auto;
 	padding: 0 10%;
+	border-radius: 0 0 5px 5px;
+	background: white;
 }
 
-.container #form .form_section, .container #form .form_section label:first-child {
+.container #form-job .form_section, .container #form-job .form_section label:first-child,
+.container #form-user-data .form_section, .container #form-user-data .form_section label:first-child {
 	width: 100%;
 	display: block;
 }
 
-.container #form .form_section label:first-child {
-	margin-bottom: 5px;
+.container #form-job .form_section label:first-child, 
+.container #form-user-data .form_section label:first-child {
+	margin: 20px 0 5px;
 	color: rgba(51,51,51, .9);
 	font-size: 15px;
 	font-weight: 700;
 }
 
-.container #form .form_section ul {
+.container #form-job .form_section ul {
 	list-style: none;
 }
 
-.container #form .form_section ul li.item_check {
+.container #form-job .form_section ul li.item_check {
 	font-size: 14px;
 	color: rgba(51,51,51, .6);
 	position: relative;
@@ -68,16 +103,16 @@ body {
 	padding-left: 10px;
 }
 
-.container #form .form_section ul li.item_check input[type=checkbox] {
+.container #form-job .form_section ul li.item_check input[type=checkbox] {
 	opacity: 0;
 }
 
-.container #form .form_section ul li.item_check input[type=checkbox]:checked ~ label:before {
+.container #form-job .form_section ul li.item_check input[type=checkbox]:checked ~ label:before {
 	background: #1393f6;
 	content: "✓";
 	color: white;
 }
-.container #form .form_section ul li.item_check label:before {
+.container #form-job .form_section ul li.item_check label:before {
 	content:  "";
 	width: 18px;
 	height: 18px;
@@ -87,4 +122,48 @@ body {
 	box-shadow: 0 0 0 1px rgba(83, 110, 123, .3);
 	position: absolute;
 	left: 0;
+}
+.container #form-job .form_section .input_form,
+.container #form-user-data .form_section .input_form {
+	padding: 13px;
+	border: 1px solid rgba(19, 147, 246, .5);
+	border-radius: 6px;
+	background: #eff4fa;
+	font-size: 14px;
+	width: 100%;
+	transition: box-shadow .18s;
+}
+.container #form-job .form_section select {
+	height: 45px;
+}
+
+.container .form_footer {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	list-style: none;
+	margin-top: 36px;
+	border-radius: 0 0 5px 5px;
+	box-shadow: inset 0 1px 0 0 rgba(51,51,51,0.05);
+}
+
+.container .form_footer li {
+	flex-grow: 1;
+	height: 40px;
+	line-height: 40px;
+	color: rgba(83, 110, 123, .5);
+	background: #e7e7e7;
+	text-align: center;
+	font-size: 12px;
+	font-weight: 400;
+	border-radius: 0 0 5px 0;
+	cursor: pointer;
+}
+.container .form_footer li:first-child {
+	border-radius: 0 0 0 5px;
+}
+
+.container .form_footer li.active {
+	background: white;
+	color: #536e7b;
 }
